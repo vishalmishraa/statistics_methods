@@ -3,46 +3,44 @@
 #include "math.h"
 using namespace std;
 
-int main(){
+int main()
+{
     int n;
+    cout << "Enter the size of the data :";
+    cin >> n;
+    cout << endl;
 
-        cout<<"Enter the size of the data :";
-        cin>>n;
-        cout<<endl;
+    float a[n + 1], median = 0;
+    a[0] = 0;
 
-    float a[n+1],median = 0;
-    a[0]=0;
-
-        cout<<"Enter the data : ";
+    cout << "Enter the data : ";
     for (int i = 1; i <= n; i++)
     {
-        cin>>a[i];
+        cin >> a[i];
     }
 
-    sort(a,a+(n+1));
-    
-   //finding Q1
-   double Q1cal = ((double)n+1)/4;
-   double Q1int , Q1Dec;
+    sort(a, a + (n + 1));
 
-   Q1Dec = modf(Q1cal,&Q1int);
+    //finding Q1
+    double Q1cal = ((double)n + 1) / 4;
+    double Q1int, Q1Dec;
 
-   double Q1 = a[(int)Q1int] + Q1Dec * (a[(int)Q1int+1] - a[(int)Q1int]);
+    Q1Dec = modf(Q1cal, &Q1int);
 
-   //finding q3
-   double Q3cal = 3 * ((double)n+1)/4;
-   double Q3int , Q3Dec;
+    double Q1 = a[(int)Q1int] + Q1Dec * (a[(int)Q1int + 1] - a[(int)Q1int]);
 
-   Q3Dec = modf(Q3cal,&Q3int);
+    //finding q3
+    double Q3cal = 3 * ((double)n + 1) / 4;
+    double Q3int, Q3Dec;
 
-   double Q3 = a[(int)Q3int] + Q3Dec * (a[(int)Q3int+1] - a[(int)Q3int]);
+    Q3Dec = modf(Q3cal, &Q3int);
 
-   //quartile deviatio = q3-q1/2
-   float QD = (Q3-Q1)/2;
+    double Q3 = a[(int)Q3int] + Q3Dec * (a[(int)Q3int + 1] - a[(int)Q3int]);
 
-   cout<<"Quartile Deviation is : "<<QD<<endl;
+    //quartile deviatio = q3-q1/2
+    float QD = (Q3 - Q1) / 2;
 
-
+    cout << "Quartile Deviation is : " << QD << endl;
 }
 
 //output
