@@ -48,7 +48,6 @@ int main()
 /*
 Enter the size of the data :8
 
-Enter the data : 5 8 15 20 25 30 40 
-18
+Enter the data : 5 8 15 20 25 30 40 18
 Inter Quartile Range is : 19
 */
