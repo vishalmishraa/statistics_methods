@@ -1,96 +1,95 @@
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
-void display(int arr[],int N)
+void display(int arr[], int N)
 {
-	for(int i=0;i<N;i++)
+	for (int i = 0; i < N; i++)
 	{
-		cout<<arr[i]<<"\t";
+		cout << arr[i] << "\t";
 	}
 }
 
 int main()
 {
 	int n;
-	cout<<"Enter total no of item: "<<endl;
-	cin>>n;
+	cout << "Enter total no of item: " << endl;
+	cin >> n;
 
-//taking input of X
-cout<<"enter X"<<endl;
+	//taking input of X
+	cout << "enter X" << endl;
 	int arrx[n];
-	for(int i=0;i<n;i++)
+	for (int i = 0; i < n; i++)
 	{
-		cin>>arrx[i];
+		cin >> arrx[i];
 	}
 
-//taking input of F
-cout<<"enter F"<<endl;
+	//taking input of F
+	cout << "enter F" << endl;
 	int arrf[n];
-	for(int i=0;i<n;i++)
+	for (int i = 0; i < n; i++)
 	{
-		cin>>arrf[i];
+		cin >> arrf[i];
 	}
 
-
-	  // Array Sorting - Asensding Order
+	// Array Sorting - Asensding Order
 	//sorting X and F
-    for (int i = 0; i < n; ++i)
-    {
-        for (int j = i + 1; j < n; ++j)
-        {
-            if (arrx[i] > arrx[j])
-            {
-               int temp =  arrx[i];
-                arrx[i] = arrx[j];
-                arrx[j] = temp;
-
-                int tempf =  arrf[i];
-                arrf[i] = arrf[j];
-                arrf[j] = tempf;
-
-            }
-        }
-    }
-
-    //cummulative frequency 
-    int arrcf[n];
-	for(int i=0;i<n;i++)
+	for (int i = 0; i < n; ++i)
 	{
-		if(i==0)
+		for (int j = i + 1; j < n; ++j)
 		{
-			arrcf[i]=arrf[i];
+			if (arrx[i] > arrx[j])
+			{
+				int temp = arrx[i];
+				arrx[i] = arrx[j];
+				arrx[j] = temp;
+
+				int tempf = arrf[i];
+				arrf[i] = arrf[j];
+				arrf[j] = tempf;
+			}
+		}
+	}
+
+	//cummulative frequency
+	int arrcf[n];
+	for (int i = 0; i < n; i++)
+	{
+		if (i == 0)
+		{
+			arrcf[i] = arrf[i];
 		}
 		else
 		{
-		arrcf[i]= arrcf[i-1]+arrf[i];
+			arrcf[i] = arrcf[i - 1] + arrf[i];
 		}
 	}
 
 	//displaying sorted items
-	cout<<"\nX :";
-	display(arrx,n);
+	cout << "\nX :";
+	display(arrx, n);
 
-	cout<<"\nF :";
-	display(arrf,n);
+	cout << "\nF :";
+	display(arrf, n);
 
-	cout<<"\nCF:";
-	display(arrcf,n);
+	cout << "\nCF:";
+	display(arrcf, n);
 
-	float sumF= arrcf[n-1];
+	float sumF = arrcf[n - 1];
 
-	float median= (sumF + 1) / 2;
-	
+	float median = (sumF + 1) / 2;
+
 	int key;
-	for(int i=0;i<n;i++)
+	for (int i = 0; i < n; i++)
 	{
-		if(arrcf[i]>median)
+		if (arrcf[i] > median)
 		{
-			key=i;
+			key = i;
 			break;
 		}
 	}
-	cout<<endl;
-	cout<<"\nMedian: \n"<<arrx[key];
+	cout << endl;
+	cout << "\nMedian: \n"
+		 << arrx[key];
 	return 0;
 }
