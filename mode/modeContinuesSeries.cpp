@@ -6,8 +6,9 @@ using namespace std;
 int main()
 {
     int n;
-    cout << "Enter the size of the Data :" << endl;
+    cout << "Enter the size of the Data : ";
     cin >> n;
+    cout << endl;
 
     float a[n + 1], b[n + 1], f[n + 1];
     a[0] = 0;
@@ -36,20 +37,22 @@ int main()
 
     mode = l + (((f1 - f0) / (2 * f1 - f0 - f2)) * h);
 
-    cout << "Mode of a continues series is : " << mode << endl;
+    cout << "\nMode of a continues series is : " << mode << endl;
 
     return 0;
 }
 //output
 /*
-Enter the size of the Data :
-6
+Enter the size of the Data : 7
+
 class   frequency
-20 25 7
-25 30 3
-30 35 11
-35 40 5
-40 45 2
-45 50 9
-Mode of a continues series is : 32.8571
+0 5 3
+3 10 7
+10 15 15
+15 20 30
+20 25 20
+25 30 10
+30 35 5
+
+Mode of a continues series is : 18
 */
