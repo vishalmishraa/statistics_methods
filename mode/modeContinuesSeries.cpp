@@ -1,6 +1,4 @@
 #include "iostream"
-#include "vector"
-#include "algorithm"
 using namespace std;
 
 int main()
@@ -22,9 +20,25 @@ int main()
         cin >> a[i] >> b[i] >> f[i];
     }
 
-    //Now find the most frequent value
-    float mf = *max_element(f, f + n);
-    int index = distance(f, find(f, f + n, mf));
+    //finding most frequent value
+    float mf = f[1];
+    for (int i = 0; i < n; i++)
+    {
+        if (f[i] > mf)
+        {
+            mf = f[i];
+        }
+    }
+
+    //finding index;
+    int index;
+    for (int i = 1; i < (n + 1); i++)
+    {
+        if (f[i] == mf)
+        {
+            index = i;
+        }
+    }
 
     //now implement the formula
     float mode = 0, l = 0, f0 = 0, f1 = 0, f2 = 0, h = 0;
