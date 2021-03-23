@@ -57,16 +57,19 @@ int main()
 }
 //output
 /*
-Enter the size of the Data : 7
+Enter the size of the Data : 10
 
 class   frequency
-0 5 3
-3 10 7
-10 15 15
-15 20 30
-20 25 20
-25 30 10
-30 35 5
+0 10 3
+10 20 5
+20 30 7
+30 40 10
+40 50 12
+50 60 15
+60 70 12
+70 80 6
+80 90 2
+90 100 8
 
-Mode of a continues series is : 18
+Mode of a continues series is : 55
 */
