@@ -46,9 +46,9 @@ int main()
         f_X_mean_2 += (f[i] * x_mean2[i]);
     }
 
-    float meanDeviation = sqrt(f_X_mean_2 / f1);
+    float StandDeviation = sqrt(f_X_mean_2 / f1);
 
-    cout << "\nMean deviation is : " << meanDeviation << endl;
+    cout << "\nStandered deviation is : " << StandDeviation << endl;
 }
 
 /*
@@ -58,10 +58,10 @@ OUTPUT
 Enter the size of the data :5
 
  
- Enter the values of X : 2 3 4 5 6 
+ Enter the values of X : 2 3 4 5 6
 
  
  Enter the values of F : 5 4 3 7 1
 
-Mean deviation is : 1.29904
+Standered deviation is : 1.29904
  */
