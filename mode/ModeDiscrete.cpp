@@ -52,7 +52,7 @@ int main()
     }
 
     float mode = x[index];
-    cout << "Mean is : " << mode << "\n";
+    cout << "Mode is : " << mode << "\n";
     return 0;
 }
 
@@ -65,6 +65,6 @@ Enter value of X : 14 36 45 70 105
 
 Enter value of F : 2 5 1 3 12 0
 
-Mean is : 105
+mode is : 105
 
 */

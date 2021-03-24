@@ -75,7 +75,7 @@ int main()
 	cout << "\nCF:";
 	display(arrcf, n);
 
-	float sumF = arrcf[n - 1];
+	float sumF = arrcf[n-1];
 
 	float median = (sumF + 1) / 2;
 

@@ -19,20 +19,12 @@ int main()
     for (int i = 1; i <= n; i++)
     {
         cin >> r1[i] >> r2[i] >> f[i];
-        // sumofF+=f[i];
     }
 
     //creating cf
     for (int i = 1; i <= n; i++)
     {
-        // if (i == 0)
-        // {
-        //     cf[i] = f[i];
-        // }
-        // else
-        // {
         cf[i] = cf[i - 1] + f[i];
-        // }
     }
 
     float l = 0, N = 0, cf1 = 0, fq = 0, h = 0, mf = 0;

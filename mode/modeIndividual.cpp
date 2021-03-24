@@ -18,9 +18,20 @@ int main()
         cin >> a[i];
     }
 
-    sort(a, a + (n + 1));
+    // sort(a, a + (n + 1));
+    for(int i=0;i<n;i++){
+        for(int j =i+1;j<n+1;j++){
+            if (a[i]>a[j])
+            {
+                int temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+            
+        }
+    }
 
-    int number = a[0], size = n + 1;
+    int number = 0, size = n + 1;
     int mode = number;
     int count = 1;
     int countMode = 1;

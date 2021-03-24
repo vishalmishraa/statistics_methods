@@ -18,8 +18,20 @@ int main()
         cin >> a[i];
     }
 
-    sort(a, a + (n + 1));
-
+    // sort(a, a + (n + 1));
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; i < n + 1; j++)
+        {
+            if (a[i] > a[j])
+            {
+                int temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+    }
+    
     //finding Q1
     double Q1cal = ((double)n + 1) / 4;
     double Q1int, Q1Dec;
